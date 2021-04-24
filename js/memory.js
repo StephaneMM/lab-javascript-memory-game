@@ -8,6 +8,25 @@ class MemoryGame {
   }
 
   shuffleCards(cards) {
+
+    if (this.cards.length===0) {
+      return undefined
+    } else {
+
+      let i= this.cards.length;
+      let j = 0;
+      let temp =0;
+      while(--i>0){
+        j=Math.floor(Math.random() * (i+1));
+        temp=this.cards[j];
+        this.cards[j]=this.cards[i];
+        this.cards[i]=temp;
+      }
+
+    }
+     
+
+
     //   if (this.cards !== cards) {
     //     return undefined;
     //   } else {
